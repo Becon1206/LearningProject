@@ -1,0 +1,144 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Section */
+.header {
+    background-color: #213862;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 0;
+    z-index: 5;
+}
+
+.header .content-header {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    margin-left: 3rem;
+}
+
+.header .content-header h2 {
+    margin-left: 10px;
+    font-size: 28px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-container .nav-tab {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-container .nav-tab:hover,
+.nav-container .nav-tab.active {
+    background-color: #1c2743;
+    transform: translateY(-2px);
+}
+
+main {
+    display: flex;
+    margin-top: 80px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #213555;
+    padding: 20px;
+    width: 200px;
+    height: calc(100vh - 80px);
+    position: fixed;
+    top: 80px;
+    left: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+}
+
+.sidebar a:hover {
+    background-color: #FF7F3E;
+}
+
+/* Content Section */
+#content {
+    margin-left: 240px;
+    padding: 20px;
+    flex: 1;
+}
+
+.content-container {
+    display: none;
+}
+
+.content-container.active {
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #8aa6eb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #FF7F3E;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .tabs-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+}
